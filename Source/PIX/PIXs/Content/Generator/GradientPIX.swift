@@ -47,8 +47,8 @@ open class GradientPIX: PIXGenerator, PIXAuto {
     public var offset: LiveFloat = 0.0
     public var position: LivePoint = .zero
     public var extendRamp: ExtendMode = .hold { didSet { setNeedsRender() } }
-    public var colorSteps: [ColorStep] = [ColorStep(0.0, .black), ColorStep(1.0, .white)]
-    
+    public var colorSteps: [ColorStep] = [ColorStep(0.0, .black), ColorStep(1.0, .white)] { didSet { setNeedsRender() }}
+
     // MARK: - Property Helpers
     
     override open var liveValues: [LiveValue] {

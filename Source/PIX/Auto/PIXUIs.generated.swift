@@ -284,6 +284,14 @@ public struct GradientPIXUI: View, PIXUI {
         gradientpix.direction = direction
         return self
     }
+    public func rainbow() -> GradientPIXUI {
+        gradientpix.rainbow()
+        return self
+    }
+    public func colorSteps(_ colorSteps: [ColorStep]) -> GradientPIXUI {
+        gradientpix.colorSteps = colorSteps
+        return self
+    }
 }
 
 
